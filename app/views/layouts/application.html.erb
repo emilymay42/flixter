@@ -24,7 +24,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
@@ -34,6 +39,14 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<!-- Flash messages for devise with bootstrap -->
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 <%= yield %>
 
