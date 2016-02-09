@@ -2,9 +2,9 @@
 	<br /> <br />
 	<div class = "frosty col-xs-10 col-xs-offset-1 text-center">
 		<br />
-		<h1> Landing page </h1>
+		<h1> Learn Something Today </h1>
 		<br />
-		<h2>Subtitle</h2>
+		<h2> Flixter </h2>
 		<br />
 		<%= link_to 'Learn More', courses_path, class: 'btn btn-success' %>
 		<br /><br />
@@ -12,14 +12,23 @@
 </div>
 
 <br />
-<div class = "col-xs-10 col-xs-offset-1 features text-center">
+<div class = "col-xs-10 col-xs-offset-1 features text-center booyah-box">
 	<div class = "col-sm-4">
-		<h3> Feature 1 </h3>
+		<%= image_tag 'cooking.png', class: 'feature-icon' %>
+		<br/><br />
+		<h3> Learn to Cook </h3>
+		<p> Find courses teaching everything from cereal to souffle </p>
 	</div>
 	<div class = "col-sm-4">
-		<h3> Feature 2 </h3>
+		<%= image_tag 'play.png', class: 'feature-icon' %>
+		<br /><br />
+		<h3> Video Lessons </h3>
+		<p> Each course provides instruction through original video content</p>
 	</div>
 	<div class = "col-sm-4">
-		<h3> Feature 3 </h3>
+		<%= image_tag 'language.png', class: 'feature-icon' %>
+		<br/><br/>
+		<h3> Learn a New Language </h3>
+		<p> Find a course to learn a new language </p>
 	</div>
 </div>
